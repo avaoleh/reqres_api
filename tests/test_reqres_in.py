@@ -1,8 +1,14 @@
 from requests import Response
 from pytest_voluptuous import S
 from schemas import schemas
+from allure_commons.types import Severity
+import allure
 
 
+@allure.tag("Api test")
+@allure.severity(Severity.CRITICAL)
+@allure.label("owner", "OAO")
+@allure.feature('Create single user')
 def test_create_single_user(reqres):
     created_user: Response = reqres.post(
         url="api/users",
@@ -17,7 +23,10 @@ def test_create_single_user(reqres):
     assert S(schemas.create_single_user) == created_user.json()
     assert len(created_user.json()) == 4
 
-
+@allure.tag("Api test")
+@allure.severity(Severity.CRITICAL)
+@allure.label("owner", "OAO")
+@allure.feature('Register single user')
 def test_register_single_user(reqres):
     registered_user: Response = reqres.post(
         url="api/register",
@@ -31,7 +40,10 @@ def test_register_single_user(reqres):
     assert S(schemas.register_single_user) == registered_user.json()
     assert registered_user.json()["token"] is not None
 
-
+@allure.tag("Api test")
+@allure.severity(Severity.CRITICAL)
+@allure.label("owner", "OAO")
+@allure.feature('Update single user')
 def test_update_single_user(reqres):
     create_user: Response = reqres.post(
         url="api/users",
@@ -54,7 +66,10 @@ def test_update_single_user(reqres):
     assert result.json()["job"] == "AQA"
     assert result.json()["name"] == "JohnDoeQA"
 
-
+@allure.tag("Api test")
+@allure.severity(Severity.CRITICAL)
+@allure.label("owner", "OAO")
+@allure.feature('Login single user successful')
 def test_login_single_user_successful(reqres):
     login_user: Response = reqres.post(
         url="api/login",
@@ -68,7 +83,10 @@ def test_login_single_user_successful(reqres):
     assert S(schemas.login_single_user_successful) == login_user.json()
     assert len(login_user.json()["token"]) == 17
 
-
+@allure.tag("Api test")
+@allure.severity(Severity.CRITICAL)
+@allure.label("owner", "OAO")
+@allure.feature('Login user unsuccessful')
 def test_login_user_unsuccessful(reqres):
     login_user: Response = reqres.post(
         url="api/login",
