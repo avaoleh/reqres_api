@@ -20,7 +20,7 @@ def test_login_with_api(browser_open):
 def test_search_negative_result(browser_open):
     browser.open("")
 
-    with allure.step("Negitive search"):
+    with allure.step("Negative search"):
         browser.element('.search-box [value="Search store"]').click()
         browser.element('.search-box [value="Search store"]').type('negative test').press_enter()
         browser.element('.result').should(have.text('No products were found that matched your criteria.'))
@@ -32,7 +32,7 @@ def test_watch_profile(browser_open):
 
     with allure.step("Check info in profile"):
         browser.element(".account").should(have.text(os.getenv('LOGIN'))).click()
-        browser.element('#FirstName').should(have.value('mkdv'))
+        browser.element('#FirstName').should(have.value('oao'))
         browser.element('#LastName').should(have.value('00'))
         browser.element('#Email').should(have.value(os.getenv('LOGIN')))
         browser.element('[checked="checked"]#gender-male')
