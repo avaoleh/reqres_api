@@ -138,3 +138,6 @@ dmypy.json
 Scripts/
 pyvenv.cfg
 poetry.lock
+
+
+allure-results/
