@@ -36,7 +36,7 @@ WEB тесты - это тесты для демонстрации гибрид�
 <!-- Jenkins -->
 
 ### <img width="3%" title="Jenkins" src="images/logo_stacks/jenkins.png"> Запуск проекта в Jenkins
-### [Job](https://jenkins.autotests.cloud/job/avaoleg_qa_guru_reqres_api/)
+### [Job](https://jenkins.autotests.cloud/job/avaoleg_qa_guru_api_reqres/)
 ##### При нажатии на "Собрать сейчас" начнется сборка тестов и их прохождение на сервере jenkins.
 ![This is an image](images/screenshots/jenkins.png)
 
@@ -59,7 +59,7 @@ WEB тесты - это тесты для демонстрации гибрид�
 <!-- Allure TestOps -->
 
 ### <img width="3%" title="Allure TestOps" src="images/logo_stacks/allure_testops.png"> Интеграция с Allure TestOps
-### [Dashboard](https://allure.autotests.cloud/project/2025/dashboards)
+### [Dashboard](https://allure.autotests.cloud/project/2093/dashboards)
 ##### Так же вся отчетность сохраняется в Allure TestOps, где строятся аналогичные графики.
 ![This is an image](images/screenshots/allure_testops_dashboard.png)
 
