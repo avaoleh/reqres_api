@@ -3,8 +3,12 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+#Allure
 # C extensions
 *.so
+../../../QA_GURU_HW/Api_test_2/.idea/
+.idea/vcs.xml
+
 
 # Distribution / packaging
 .Python
@@ -49,11 +53,16 @@ coverage.xml
 *.cover
 *.py,cover
 .hypothesis/
-.pytest_cache/
+../rest_api_1/new_rest_api/.pytest_cache/
+../.idea/
+
 
 # Translations
 *.mo
 *.pot
+ __init__.py
+
+
 
 # Django stuff:
 *.log
@@ -93,6 +102,11 @@ ipython_config.py
 
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow
 __pypackages__/
+.idea/
+.venv/
+.pytest_cache/
+tests/.pytest_cache/
+.env
 
 # Celery stuff
 celerybeat-schedule
@@ -102,12 +116,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
+
 
 # Spyder project settings
 .spyderproject
@@ -126,9 +135,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-.idea/
-allure-results/
-
-# Ignore dynaconf secret files
-.secrets.*
-.env
+Scripts/
+pyvenv.cfg
+poetry.lock

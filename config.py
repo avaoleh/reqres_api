@@ -1,10 +1,16 @@
+from dataclasses import dataclass
 
-from dynaconf import Dynaconf
 
-settings = Dynaconf(
-    envvar_prefix="DYNACONF",
-    settings_files=['settings.toml', '.secrets.toml'],
-)
-
-# `envvar_prefix` = export envvars with `export DYNACONF_FOO=bar`.
-# `settings_files` = Load these files in the order.
+@dataclass
+class Hosts:
+    def __init__(self, env):
+        self.demoqa = {
+            'local': 'localhost:5555',
+            'test': 'http://your_test_demoqa_env.com',
+            'prod': 'https://demowebshop.tricentis.com/',
+        }[env]
+        self.reqres = {
+            'local': 'localhost:5555',
+            'test': 'http://your_test_env.com/',
+            'prod': 'https://reqres.in/',
+        }[env]
