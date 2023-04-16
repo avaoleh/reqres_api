@@ -30,9 +30,6 @@ WEB тесты - это тесты для демонстрации гибрид�
 В WEB тестах используется API для авторизации, создание и удаление сущностей.
 ![This is an image](images/screenshots/web_call_api_methods.png)
 
-В проекте используется встроенный logger - logging:
-![This is an image](images/screenshots/logger.png)
-
 <!-- Jenkins -->
 
 ### <img width="3%" title="Jenkins" src="images/logo_stacks/jenkins.png"> Запуск проекта в Jenkins
